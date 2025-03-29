@@ -79,6 +79,7 @@ import { useStore } from "./store/Store";
   
           <div className="footer">
             <div className="items-left">{itemsLeft()} items left</div>
+            <div className="items-left-mob">{itemsLeft()}`s left</div>
             <div className="filter-buttons">
               <button
                 onClick={() => setFilter("all")}

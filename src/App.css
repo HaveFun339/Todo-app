@@ -173,7 +173,9 @@ img {
   color: #4771d3;
   font-weight: bolder;
 }
-
+.cont1{
+  padding-bottom: 10px;
+}
 .clear-completed {
   background: transparent;
   border: none;
@@ -210,6 +212,19 @@ img {
   }
 
   .filter-button {
-    margin: 3px 0;
+    margin: 3px;
+  }
+}
+.items-left-mob{
+  display: none;
+}
+@media (max-width: 700px) {
+  .items-left-mob{
+    display: block;
+
+  }
+  .items-left{
+    display: none;
+
   }
 }
