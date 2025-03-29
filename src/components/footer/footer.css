@@ -1,0 +1,29 @@
+
+.footer {
+    width: 630px;
+    height: 40px;
+    background: #25273c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    margin-top: 8px;
+    color: #525464;
+  }
+  
+  .filter-buttons {
+    display: flex;
+  }
+  
+  .filter-button {
+    background: transparent;
+    border: none;
+    color: #525464;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .filter-button.active-filter {
+    color: #4771d3;
+    font-weight: bolder;
+  }
