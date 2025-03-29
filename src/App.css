@@ -141,7 +141,7 @@ img {
 }
 
 .footer {
-  width: 530px;
+  width: 630px;
   height: 40px;
   background: #25273c;
   display: flex;
@@ -216,7 +216,16 @@ img {
 @media (max-width: 700px) {
   .items-left-mob{
     display: block;
-
+font-size: 12px
+  }
+  .clear-completed{
+    
+      font-size: 11px;
+    
+  }
+  .filter-button{
+    font-size: 11px;
+    margin: 0;
   }
   .items-left{
     display: none;
