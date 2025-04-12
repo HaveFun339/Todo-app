@@ -16,20 +16,20 @@ export const App = () => {
     setIsDarkMode(!isDarkMode);
   };
   const handleOnSubmit = () => {
-    // Format the todos into a string
+   
     const todosMessage = currentFilteredTodos
       .map((todo, index) => `${index + 1}. ${todo.text} - ${todo.completed ? "Completed" : "Pending"}`)
       .join("\n");
   
-    // Send the email using emailjs
+  
     emailjs
       .send(
-        import.meta.env.VITE_SERVICE_ID, // Your EmailJS service ID
-        import.meta.env.VITE_TEMPLATE_ID, // Your EmailJS template ID
+        import.meta.env.VITE_SERVICE_ID, 
+        import.meta.env.VITE_TEMPLATE_ID, 
         {
-          message: todosMessage, // Pass the todos as the message
+          message: todosMessage, 
         },
-        import.meta.env.VITE_PUBLIC_KEY // Your EmailJS public key
+        import.meta.env.VITE_PUBLIC_KEY 
       )
       .then(
         (result) => {
