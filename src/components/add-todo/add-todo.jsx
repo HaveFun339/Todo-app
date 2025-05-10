@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./add-todo.css";
 import { useStore } from "../../store";
+import { Bounce, ToastContainer, toast } from "react-toastify";
 
 
 export const AddTodo = ({}) => {
@@ -25,6 +26,20 @@ const { addTodo } = useStore();
         placeholder="Create a new todo..."
         onKeyDown={(e) => {
           if (e.key === "Enter") {
+            if (newTodo.trim() === "") {
+              toast.error("Please enter a todo", {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                transition: Bounce,
+              });
+              return;
+            }
             addTodo(newTodo, check);
             setNewTodo("");
             setCheck(false);

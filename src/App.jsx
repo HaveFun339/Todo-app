@@ -6,40 +6,15 @@ import emailjs from 'emailjs-com';
 export const App = () => {
   const { toggleComplete, clearCompleted, itemsLeft, filteredTodos } = useStore();
   
-  
+
   const [filter, setFilter] = useState("all");
   const [isDarkMode, setIsDarkMode] = useState(true);
   
-  const currentFilteredTodos = filteredTodos(filter);
 
+  const currentFilteredTodos = filteredTodos(filter);
+ 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
-  };
-  const handleOnSubmit = () => {
-   
-    const todosMessage = currentFilteredTodos
-      .map((todo, index) => `${index + 1}. ${todo.text} - ${todo.completed ? "Completed" : "Pending"}`)
-      .join("\n");
-  
-  
-    emailjs
-      .send(
-        import.meta.env.VITE_SERVICE_ID, 
-        import.meta.env.VITE_TEMPLATE_ID, 
-        {
-          message: todosMessage, 
-        },
-        import.meta.env.VITE_PUBLIC_KEY 
-      )
-      .then(
-        (result) => {
-          alert("Todos sent successfully!");
-        },
-        (error) => {
-          console.log(error.text);
-          alert("Something went wrong!");
-        }
-      );
   };
   return (
     <div className="conta1">
@@ -54,7 +29,7 @@ export const App = () => {
             currentFilteredTodos={currentFilteredTodos}
             toggleComplete={toggleComplete}
           />
-          <button onClick={handleOnSubmit}>text</button>
+          
           <Footer
             itemsLeft={itemsLeft}
             filter={filter}
