@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./add-todo.css";
-import { useStore } from "../../store";
+import { useStore } from "../../store/store";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 
 

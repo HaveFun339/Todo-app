@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { useStore } from "./store";
+import { useStore } from "./store/store";
 import { Header, TodoList, Footer, AddTodo } from "./components";
 
 export const App = () => {

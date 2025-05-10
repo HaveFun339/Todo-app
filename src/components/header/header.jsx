@@ -1,7 +1,7 @@
 import "./header.css";
 import { CgMail } from "react-icons/cg";
 import emailjs from "emailjs-com";
-import { useStore } from "../../store";
+import { useStore } from "../../store/store";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 
 export const Header = ({ toggleTheme, isDarkMode }) => {

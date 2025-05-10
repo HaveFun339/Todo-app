@@ -1,6 +1,6 @@
 import React from 'react'
 import "./todo-item.css"
-import { useStore } from "../../store";
+import { useStore } from "../../store/store";
 
 export const TodoItem = ({todo,index}) => {
    const {toggleComplete} = useStore();
