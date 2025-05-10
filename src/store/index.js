@@ -1,2 +1,2 @@
-export { useStore } from "./store";
+export { useStore } from "./store.jsx";
 
