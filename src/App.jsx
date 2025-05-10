@@ -1,18 +1,17 @@
-import React, { useState } from "react";
-import "./app.css";
+import { useState } from "react";
+import "./App.css";
 import { useStore } from "./store";
 import { Header, TodoList, Footer, AddTodo } from "./components";
-import emailjs from 'emailjs-com';
+
 export const App = () => {
-  const { toggleComplete, clearCompleted, itemsLeft, filteredTodos } = useStore();
-  
+  const { toggleComplete, clearCompleted, itemsLeft, filteredTodos } =
+    useStore();
 
   const [filter, setFilter] = useState("all");
   const [isDarkMode, setIsDarkMode] = useState(true);
-  
 
   const currentFilteredTodos = filteredTodos(filter);
- 
+
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
   };
@@ -29,7 +28,7 @@ export const App = () => {
             currentFilteredTodos={currentFilteredTodos}
             toggleComplete={toggleComplete}
           />
-          
+
           <Footer
             itemsLeft={itemsLeft}
             filter={filter}
